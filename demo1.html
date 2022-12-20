@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let dtb = {
+            name: 'Tuti',
+            age: 14,
+            toan: 9,
+            ly: 8,
+            hoa: 9,
+            tinh: function(){
+                let tb = (this.toan + this.ly + this.hoa)/3;
+                alert('Điểm trung bình 3 môn của ' + this.name + ' là: ' + tb);
+            }
+        }
+        dtb.tinh();
+    </script>
+</body>
+</html>

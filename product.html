@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo lớp Product</title>
+</head>
+<body>
+    <script>
+        class Product {
+            constructor(name, color, price){
+                this.name = name;
+                this.color = color;
+                this.price = price;
+            }
+            getInfo(){
+                alert(this.name + ' màu ' + this.color + ' có giá là: ' + this.price);
+            }
+        }
+        let product1 = new Product('Iphone 14 Promax', 'Tím', 40000000);
+        product1.getInfo();
+        let product2 = new Product('Samsung S22', 'Xanh', 35000000);
+        product2.getInfo();
+        (new Product('Macbook Pro M2', 'Silver', 46000000)).getInfo();// một cách khác để gọi dữ liệu ra
+    </script>
+</body>
+</html>
