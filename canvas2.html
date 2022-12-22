@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="500" height="500" style="border: 2px solid"></canvas>
+    <script>
+        function Rectangle(x, y, width, height, color){
+            this.x = x;
+            this.y = y;
+            this.width = width;
+            this.height = height;
+            this.color = color;
+        }
+        function getRandomHex(){
+            return Math.floor(Math.random()*255);
+        }
+        function getRandomColor(){
+            let red = getRandomHex();
+            let green = getRandomHex();
+            let blue = getRandomHex();
+            return "rgb(" + red + "," + green + "," + blue + ")";
+        }
+        function createRectangle(){
+            let ctx = document.getElementById('myCanvas').getContext("2d");
+            let color = getRandomColor();
+            let x = 100;
+            let y = 100;
+            let width = 300;
+            let height = 200;
+            let rectangle = new Rectangle(x, y, width, height, color);
+            ctx.beginPath();
+            ctx.fillRect(rectangle.x, rectangle.y, rectangle.width, rectangle.height);
+            ctx.fillStyle = color;
+        }
+        createRectangle();
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas width="500" height="600" style="border: 5px solid" id="myCanvas"></canvas>
+    <script>
+        let ctx = document.getElementById("myCanvas").getContext('2d');
+        ctx.beginPath();
+        ctx.arc(200,200,50,0,2*Math.PI); // vẽ hình tròn (tọa độ x, tọa độ y, bán kính, điểm bắt đầu, điểm kết thúc)
+        ctx.stroke();
+        ctx.fillStyle = 'red';
+        ctx.fillRect(50, 50, 100, 50); // vẽ hình chữ nhật (tọa độ x, tọa độ y, chiều dài, chiều rộng)
+    </script>
+</body>
+</html>

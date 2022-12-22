@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Temperature {
+            constructor(cellius){
+                this.cellius = cellius;
+            }
+
+            getKelvin(){
+                return this.cellius + 273.15;
+            }
+
+            getFahrenheit(){
+                return this.cellius*9/5 + 32;
+            }
+        }
+        let c = +prompt("Nhập vào độ C");
+        let t = new Temperature(c);
+        alert(c.getFahrenheit());
+    </script>
+</body>
+</html>
